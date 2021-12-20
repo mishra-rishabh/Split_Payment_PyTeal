@@ -1,8 +1,8 @@
-<h2>Split Payment:</h2><br/>
+<h2>Split Payment:</h2>
 A split payment divides the cost of a single purchase into two or more transactions. It splits the payment
 between receiver 1 and receiver 2 on the ratio which is decided.
 
-<h5>Reference link:</h5><br/>
+<h5>Reference link:</h5>
 https://pyteal.readthedocs.io/en/stable/examples.html
 <br/>
 
