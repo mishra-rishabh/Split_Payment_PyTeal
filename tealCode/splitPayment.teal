@@ -1,0 +1,61 @@
+#pragma version 5
+txn TypeEnum
+int pay
+==
+txn Fee
+int 1000
+<
+&&
+txn RekeyTo
+global ZeroAddress
+==
+&&
+global GroupSize
+int 2
+==
+bnz main_l2
+txn CloseRemainderTo
+addr ZKQKW4IN6GNQD3AECO3IZU3S2G62HPIN3BP376HO236QTUZUV7DLIAY6CY
+==
+txn Receiver
+global ZeroAddress
+==
+&&
+txn Amount
+int 0
+==
+&&
+txn FirstValid
+int 3000
+>
+&&
+b main_l3
+main_l2:
+gtxn 0 Sender
+gtxn 1 Sender
+==
+txn CloseRemainderTo
+global ZeroAddress
+==
+&&
+gtxn 0 Receiver
+addr DRW5EVPGYWE3FZOJVY42XEZMNRCHBOJJYOV6FKRIKIFDBXKMNEORJVHQ4A
+==
+&&
+gtxn 1 Receiver
+addr LMPLRRLSBFMJEQXAWS4XOVRXIR4CBH6ROP2QC5JUVTFGPKJOX7YBN63TEI
+==
+&&
+gtxn 0 Amount
+gtxn 0 Amount
+gtxn 1 Amount
++
+int 1
+*
+int 3
+/
+==
+&&
+main_l3:
+&&
+return
